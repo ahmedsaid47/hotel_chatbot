@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# API Keys and Sensitive Information
+.openai_key
+*.key
+*.pem
+*.env
+
+# Database files
+*.sqlite3
+*.db
+chroma_db/
+
+# Logs
+*.log
+logs/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Project specific
+cullian_vector/chroma_db/
+cullian_rag/.openai_key
+cullian_finetune/.openai_key
+cullian_vektor/.openai_key
