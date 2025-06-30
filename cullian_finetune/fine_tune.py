@@ -3,31 +3,7 @@
 import os
 import time
 from openai import OpenAI
-
-
-API_FALLBACK_PATH = ".openai_key"  # İstenirse değiştirilebilir
-
-
-def load_api_key() -> str:
-    """
-    Önce ortam değişkeninden, ardından yedek dosyadan API anahtarını okur.
-    Bulunamazsa ValueError fırlatır.
-    """
-    api_key = os.getenv("OPENAI_API_KEY")
-    if api_key:
-        return api_key
-
-    if os.path.isfile(API_FALLBACK_PATH):
-        with open(API_FALLBACK_PATH, "r", encoding="utf-8") as f:
-            key = f.read().strip()
-            if key:
-                return key
-
-    raise ValueError(
-        "OPENAI_API_KEY bulunamadı. "
-        "Lütfen ortam değişkenini ayarlayın veya "
-        f"{API_FALLBACK_PATH} dosyasına anahtarı yazın."
-    )
+from config import load_api_key
 
 
 def main() -> None:

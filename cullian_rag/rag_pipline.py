@@ -9,7 +9,9 @@ $ python rag_pipeline.py "Plaj uzunluğu nedir?"
 
 import sys, textwrap, chromadb, openai
 from typing import List
-from utils import load_api_key, resolve_finetuned_model
+sys.path.append('..')
+from config import load_api_key
+from utils import resolve_finetuned_model
 
 # -- Parametreler --------------------------------------------------------
 FT_JOB_ID           = "ftjob-4PgvjKjT6FqQywNiX9qKsN8H"
